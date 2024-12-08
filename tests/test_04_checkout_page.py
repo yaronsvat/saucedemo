@@ -1,9 +1,13 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'saucedemo_tests')))
+
 from saucedemo_tests.pages.checkout_page import CheckoutPage
 from saucedemo_tests.pages.cart_page import CartPage
 from saucedemo_tests.pages.inventory_page import InventoryPage
 from utils.browser_utils import get_cart_count
 import pytest
-from conftest import login_test_params
+from conftest import login_test_params, logged_in_page
 
 USER_COST = 16
 

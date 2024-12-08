@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'saucedemo_tests')))
+
 from saucedemo_tests.pages.login_page import LoginPage
 
 def test_login_standard_user(browser):

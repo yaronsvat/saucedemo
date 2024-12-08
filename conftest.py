@@ -12,6 +12,7 @@ def browser(playwright):
 
 @pytest.fixture
 def logged_in_page(browser, request):
+    print("Fixture 'logged_in_page' is being set up")
     username = request.param.get("username")
     password = request.param.get("password")
     page = browser.new_page()
