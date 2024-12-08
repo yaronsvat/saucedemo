@@ -9,7 +9,6 @@ USER_COST = 16
 def test_product_list_visibility(logged_in_page):
     product_list = logged_in_page.locator(".inventory_list")
     assert product_list.is_visible(), "Product list is not visible on the page"
-    pass
 
 @pytest.mark.parametrize("logged_in_page", login_test_params, indirect=True)
 def test_inventory_buttons(logged_in_page):
