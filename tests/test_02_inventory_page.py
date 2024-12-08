@@ -1,4 +1,4 @@
-from conftest import login_test_params
+from conftest import logged_in_page, login_test_params
 from saucedemo_tests.pages.inventory_page import InventoryPage
 from utils.browser_utils import get_cart_count, sort_items
 import pytest
@@ -46,6 +46,9 @@ def test_sort_price_high_to_low(logged_in_page):
     prices = logged_in_page.locator(".inventory_item_price").all_text_contents()
     prices = [float(price.strip("$")) for price in prices]
     assert prices == sorted(prices, reverse=True), "Items are not sorted by Price (high to low)"
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'saucedemo_tests')))
 
 @pytest.mark.parametrize("logged_in_page", login_test_params, indirect=True)
 def test_sort_name_a_to_z(logged_in_page):
