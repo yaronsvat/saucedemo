@@ -1,9 +1,9 @@
 from saucedemo_tests.pages.checkout_page import CheckoutPage
 from saucedemo_tests.pages.cart_page import CartPage
 from saucedemo_tests.pages.inventory_page import InventoryPage
-from saucedemo_tests.utils.browser_utils import get_cart_count
+from utils.browser_utils import get_cart_count
 import pytest
-from saucedemo_tests.conftest import login_test_params
+from conftest import login_test_params
 
 USER_COST = 16
 
