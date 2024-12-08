@@ -31,7 +31,6 @@ def test_add_items_above_price(logged_in_page):
 @pytest.mark.parametrize("logged_in_page", login_test_params, indirect=True)
 def test_sorted_option_price_low_to_high(logged_in_page):
     sort_items(logged_in_page, "za")
-    pass
 
 @pytest.mark.parametrize("logged_in_page", login_test_params, indirect=True)
 def test_sort_price_low_to_high(logged_in_page):
