@@ -4,6 +4,7 @@ def test_login_standard_user(browser):
     login_page = LoginPage(browser)
     result = login_page.login("standard_user", "secret_sauce")
     assert result == "Login successful: Redirecting to https://www.saucedemo.com/inventory.html"
+    pass
 
 def test_login_problem_user(browser):
     login_page = LoginPage(browser)
