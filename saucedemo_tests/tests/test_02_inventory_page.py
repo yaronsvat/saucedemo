@@ -1,4 +1,4 @@
-from conftest import logged_in_page, login_test_params
+from utils.conftest import logged_in_page, login_test_params
 from saucedemo_tests.pages.inventory_page import InventoryPage
 from utils.browser_utils import get_cart_count, sort_items
 import pytest
