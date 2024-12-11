@@ -4,6 +4,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..',
 
 from saucedemo_tests.pages.login_page import LoginPage
 
+
 def test_login_standard_user(browser):
     login_page = LoginPage(browser)
     result = login_page.login("standard_user", "secret_sauce")
